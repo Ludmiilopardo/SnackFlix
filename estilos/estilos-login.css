@@ -10,11 +10,19 @@
   margin: 0 auto;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: #deeeec;
   color: var(--text);
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
@@ -38,7 +46,10 @@ header {
     color: white;
 }
 
-
+main{
+    flex: 1 0 auto;
+    display: block;
+}
 
 
 .form-label {
@@ -67,11 +78,14 @@ header {
 
 /* Footer */
 footer {
-  background-color:#0a2f4f;
+  background-color: #0a2f4f;
   color: #ddd;
   text-align: center;
-  padding: 20px 20px;
-  margin-top: 40px;
+  padding: 20px;
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+
 }
 
 
