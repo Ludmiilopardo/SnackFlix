@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snackflix - Comidas de series y películas</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="logo" onclick="goHome()">Snackflix</div>
+      <nav>
+        <a href="html/productos.html">Productos </a>
+        <a href="#series">Series</a>
+        <a href="#pelicula">Películas</a>
+
+        |<span class="search-box">
+          <input type="search" id="searchInput" placeholder="Buscar comida..." />
+        </span>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="holder">
+        <h1>¡Descubre los sabores de tus series y películas favoritas!</h1>
+        <button onclick="alert('Explora nuestras recetas pronto!')">Explora ahora</button>
+      </div>
+    </section>
+
+    <section class="holder">
+      <h2 id="series" class="section-title">Comidas Destacadas De Peliculas</h2>
+      <div class="card-container" id="cardsContainer">
+        <!-- Cards generadas por JS -->
+      </div>
+    </section>
+
+    <section class="holder">
+        <h2 id="peliculas" class="section-title">Comidas Destacadas De Series</h2>
+        <div class="card-container2" id="cardsContainer2">
+          <!-- Cards generadas por JS -->
+      <h2></h2>
+    </section>
+
+    <footer>
+      &copy; 2025 Snackflix - Todos los derechos reservados.
+    </footer>
+
+    <script src="js/ejercicio.js"></script>
+  </body>
+
+</html>
