@@ -1,0 +1,430 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.holder{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #deeeec;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/*  Header y navegación  */
+header {
+  background: linear-gradient(90deg, #1d4e79, #1e64a1);
+  padding: 10px 20px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.logo {
+      font-weight: 900;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      color: white;
+    }
+
+/* Navegación 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+nav ul li:hover {
+  background-color: rgba(224, 122, 95, 0.1);
+  color: #1e64a1;
+}*/
+
+/* Contenedor principal */
+main#boxproductos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta de producto */
+#boxproducto {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.12);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#boxproducto:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.15);
+  transform: translateY(-2px);
+}
+
+/* Imagen del producto */
+#imagenproducto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background-color: #fff2ec;
+  border: 1px solid #e5c7b7;
+}
+
+/* Nombre del producto */
+#nombreproducto {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.35;
+  height: 38px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* Precio del producto */
+#precioproducto {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--primary-600);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+}
+
+#precioproducto::before {
+  content: '$';
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+/* Botón de comprar */
+#btncomprar {
+  width: 100%;
+  background: linear-gradient(180deg, #16436b 0%, #2e4fc9 100%);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#btncomprar:hover {
+  background: linear-gradient(180deg, #4691d3 0%, #387fbd 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+}
+
+#btncomprar:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+/* Envío gratis */
+#boxproducto::after {
+  content: "Envío gratis";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #b0d79e;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  background-color: #3d1f1f;
+  color: #f4d8cd;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+footer h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fbd5b5;
+  margin-bottom: 16px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #f5e5dd;
+  margin-bottom: 8px;
+}
+
+/* Contador */
+#boxcontador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+  width: fit-content;
+  background: #fff5f2;
+}
+
+#boxcontador p {
+  min-width: 2ch;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Botones */
+#sumarproducto,
+#restarproducto,
+#agregarproducto {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#sumarproducto,
+#restarproducto {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#agregarproducto {
+  padding: 12px 16px;
+  border-color: transparent;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(224, 122, 95, .3);
+}
+
+#agregarproducto:hover {
+  background: var(--primary-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 { font-size: 20px; }
+  nav ul { gap: 20px; }
+  main#boxproductos {
+    margin: 20px auto;
+    padding: 0 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  #imagenproducto { height: 180px; }
+  #btncomprar { font-size: 13px; padding: 10px 14px; }
+  footer { padding: 30px 15px; }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  main#boxproductos {
+    grid-template-columns: 1fr;
+  }
+  #imagenproducto {
+    height: 160px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Estados de carga para imagen */
+#imagenproducto[src=""] {
+  background-image: linear-gradient(45deg, #fdf0e5 25%, #f4d8cd 25%, #f4d8cd 50%, #fdf0e5 50%, #fdf0e5 75%, #f4d8cd 75%, #f4d8cd);
+  background-size: 20px 20px;
+}
+
+/* Tipografía y espaciado en nombre, precio, etc. */
+#nombreproducto {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: 1.2;
+}
+
+#precioproducto {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  color: var(--primary);
+}
+
+#descripcionproducto {
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+#stockproducto {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Imagen del producto */
+#imagenproducto {
+  width: 100%;
+  height: clamp(180px, 35vw, 320px);
+  object-fit: contain;
+  background: #fff5f2;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Layout responsive: imagen y detalles en 2 columnas */
+@media (min-width: 640px) {
+  div:has(#agregarproducto) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img title"
+      "img price"
+      "img desc"
+      "img stock"
+      "img counter"
+      "img cta";
+    align-items: start;
+  }
+
+  #imagenproducto { grid-area: img; }
+  #nombreproducto { grid-area: title; }
+  #precioproducto { grid-area: price; }
+  #descripcionproducto { grid-area: desc; }
+  #stockproducto { grid-area: stock; }
+  #boxcontador { grid-area: counter; }
+  #agregarproducto { grid-area: cta; }
+}
+
+/* Tabla estilizada */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+  background-color: #e07a5f;
+  color: white;
+  text-align: left;
+}
+
+thead td {
+  padding: 12px 15px;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5c7b7;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #fdf0e5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Columnas específicas */
+td:nth-child(1) {
+  width: 80px;
+}
+
+td:nth-child(2) {
+  width: 100px;
+}
+
+/* Botón eliminar */
+td:nth-child(6) button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #bc4b51;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td:nth-child(6) button:hover {
+  background-color: #a33a3a;
+}
+
+#totalcompra {
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#totalproducto{
+    background-color:  #bc4b51;
+    color: white;
+    border-radius:50% ;
+    text-align: center;
+    font-style: italic ;
+    position: relative;
+    top: -20px;
+    right: -10px;
+}
