@@ -38,32 +38,32 @@
     <div class="container mt-5" style="max-width: 600px;">
         <h2 class="text-center mb-4">Formulario de Contacto</h2>
 
-        <form id="formContacto" novalidate>
+        <form id="formContacto" action="https://formspree.io/f/mpwkwggd" method="POST">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="nombre" required>
+                <input type="text" name="nombre" class="form-control" id="nombre"  placeholder="Nombre completo" required>
                 <div class="invalid-feedback">Por favor, ingresá tu nombre.</div>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" name="email" class="form-control" id="email"  placeholder="Correo electrónico" required>
                 <div class="invalid-feedback">Ingresá un correo válido.</div>
             </div>
 
             <div class="mb-3">
                 <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje..." required></textarea>
                 <div class="invalid-feedback">Escribí un mensaje antes de enviar.</div>
             </div>
 
-            <button type="button" class="btn btn-primary w-100" onclick="enviarFormulario()">Enviar</button>
-
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
 
         <div id="alerta" class="alert alert-success mt-4 d-none" role="alert">
             ¡Gracias por contactarte! Tu mensaje fue enviado correctamente.
         </div>
+
     </div>
 
     <footer>
