@@ -1,6 +1,5 @@
-// ---------------------------------------------
 // CONFIGURACIÓN DE FIREBASE
-// ---------------------------------------------
+
 const firebaseConfig = {
   apiKey: "AIzaSyCQg8eV09AUruNSaeQHSPBaHSKKZpmr3Tg",
   authDomain: "snackflix-3b377.firebaseapp.com",
@@ -17,9 +16,8 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 
-// ---------------------------------------------
-// CARGAR PRODUCTOS DESDE FIREBASE
-// ---------------------------------------------
+// Cargar productos desde FireBase
+
 async function cargarProductosFirebase() {
   try {
     const snapshot = await db.collection("Productos").get(); // <-- CORREGIDO
@@ -37,9 +35,8 @@ async function cargarProductosFirebase() {
 }
 
 
-// ---------------------------------------------
-// MOSTRAR PRODUCTOS EN EL HTML
-// ---------------------------------------------
+
+// Mostrar productos en HTML
 function mostrarProductos(lista) {
   const contenedor = document.getElementById("boxproductos");
   contenedor.innerHTML = "";
@@ -60,9 +57,8 @@ function mostrarProductos(lista) {
 }
 
 
-// ---------------------------------------------
-// VER DETALLE DEL PRODUCTO
-// ---------------------------------------------
+
+// ver detalle del producto
 function verdetalle(id) {
   db.collection("Productos") // <-- CORREGIDO
     .doc(id)
@@ -80,9 +76,6 @@ function verdetalle(id) {
 }
 
 
-// ---------------------------------------------
-// INICIO
-// ---------------------------------------------
 cargarProductosFirebase();
 
 
