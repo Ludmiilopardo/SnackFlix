@@ -84,4 +84,9 @@ function actualizar() {
   document.getElementById("totalproducto").innerHTML = carrito;
 }
 
+function irAlCarrito() {
+    window.location.href = "carrito.html";
+}
+
 actualizar();
+
