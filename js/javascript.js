@@ -20,10 +20,10 @@ const db = firebase.firestore();
 
 async function cargarProductosFirebase() {
   try {
-    const snapshot = await db.collection("Productos").get(); // <-- CORREGIDO
+    const coleccion = await db.collection("Productos").get(); // <-- CORREGIDO
     const lista = [];
 
-    snapshot.forEach(doc => {
+    coleccion.forEach(doc => {
       lista.push({ id: doc.id, ...doc.data() });
     });
 
@@ -60,7 +60,7 @@ function mostrarProductos(lista) {
 
 // ver detalle del producto
 function verdetalle(id) {
-  db.collection("Productos") // <-- CORREGIDO
+  db.collection("Productos") 
     .doc(id)
     .get()
     .then(doc => {
